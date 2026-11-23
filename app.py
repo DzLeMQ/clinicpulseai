@@ -100,7 +100,7 @@ tab_about, tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
 CHART_FONT = dict(family="Inter, sans-serif", color="#1e293b")  
 
 with tab_about:
-    st.markdown("### 🏥 Clinical Consultation Pulse & Patient Experience")
+    st.markdown("### 🏥 Project Overview")
     st.write(
         "An interactive Business Intelligence (BI) dashboard demonstrating how **local Large Language Models (LLMs)** "
         "transform raw, unstructured patient consultation comments into structured operational metrics across Melbourne clinic locations."
