@@ -88,6 +88,7 @@ st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
 # Top Segmented Pill Navigation Tabs
 tab_about, tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
     [
+        "ℹ️ About & Overview",
         "📊 Executive Overview",
         "⏱️ Operations & Bottlenecks",
         "💬 Themes & Feedback",
