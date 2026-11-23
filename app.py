@@ -99,13 +99,38 @@ tab_about, tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
 
 CHART_FONT = dict(family="Inter, sans-serif", color="#1e293b")  
 
-with tab_about:  
-    st.header("About & Overview")
-    # Load and display content derived from your README.md
-    with open("README.md", "r", encoding="utf-8") as f:
-        readme_content = f.read()
-    st.markdown(readme_content)
+with tab_about:
+    st.markdown("### 🏥 Clinical Consultation Pulse & Patient Experience")
+    st.write(
+        "An interactive Business Intelligence (BI) dashboard demonstrating how **local Large Language Models (LLMs)** "
+        "transform raw, unstructured patient consultation comments into structured operational metrics across Melbourne clinic locations."
+    )
 
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("#### 🎯 What This Project Achieves")
+        st.markdown("""
+        * **Quantifies Unstructured Feedback:** Converts free-text patient comments into sentiment polarity scores (`-1` to `+1`), satisfaction ratings (`1–5`), and NPS segments.
+        * **Pinpoints Operational Bottlenecks:** Links patient wait times with sentiment and specialty/time-of-day blocks to isolate clinic friction.
+        * **Surfaces Thematic Drivers:** Extracts the top 5 experience themes and root-cause drivers for rapid executive review.
+        * **Privacy-First AI Architecture:** Designed around local LLM processing so sensitive healthcare feedback never leaves on-premise infrastructure.
+        """)
+
+    with col2:
+        st.markdown("#### 🧭 Dashboard Guide")
+        st.markdown("""
+        * **📊 Executive Overview:** Clinic RAG rankings, monthly sentiment trajectories, and NPS loyalty breakdowns.
+        * **⏱ Operations & Bottlenecks:** Wait-time heatmaps, friction root causes, and clinician wait-vs.-sentiment benchmarks.
+        * **💬 Themes & Feedback:** Top experience themes, satisfaction drivers, and a searchable comment explorer.
+        * **📄 Before & ✨ After AI:** Inspect the raw baseline CSV side-by-side against the AI-enriched dataset.
+        """)
+
+    st.info(
+        "**⚠️ Synthetic Data & Code Disclosure:** All patient records, clinician names, clinic metrics, and comments "
+        "in this dashboard are **100% synthetically generated** for demonstration and prototyping purposes only—do not use "
+        "for clinical or operational decision-making. Underlying local LLM enrichment scripts remain a work in progress."
+    )
 
 # =============================================================================
 # TAB 1: EXECUTIVE OVERVIEW
