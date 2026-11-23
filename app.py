@@ -86,7 +86,7 @@ render_kpi_card(
 st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
 
 # Top Segmented Pill Navigation Tabs
-tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
+tab_about, tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
     [
         "📊 Executive Overview",
         "⏱️ Operations & Bottlenecks",
@@ -96,7 +96,15 @@ tab_exec, tab_ops, tab_themes, tab_before, tab_after = st.tabs(
     ]
 )
 
-CHART_FONT = dict(family="Inter, sans-serif", color="#1e293b")
+CHART_FONT = dict(family="Inter, sans-serif", color="#1e293b")  
+
+with tab_about:  
+    st.header("About & Overview")
+    # Load and display content derived from your README.md
+    with open("README.md", "r", encoding="utf-8") as f:
+        readme_content = f.read()
+    st.markdown(readme_content)
+
 
 # =============================================================================
 # TAB 1: EXECUTIVE OVERVIEW
