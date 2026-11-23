@@ -20,6 +20,9 @@ def apply_custom_css():
         [data-testid="stSidebar"], [data-testid="collapsedControl"] {
             display: none !important;
         }
+        [data-testid="stHeader"] {
+        display: none !important;
+        }
         #MainMenu { visibility: hidden; }
         footer { visibility: hidden; }
 
