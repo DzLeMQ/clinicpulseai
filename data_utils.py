@@ -32,7 +32,7 @@ def apply_custom_css():
         }
 
         .block-container {
-            padding-top: 3.5rem;
+            padding-top: 1.5rem;
             padding-bottom: 3rem;
             max-width: 1420px;
         }
